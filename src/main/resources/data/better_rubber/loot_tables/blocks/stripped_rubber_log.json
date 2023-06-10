@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "better_rubber:resin_block"
+          "name": "better_rubber:stripped_rubber_log"
         }
       ],
       "rolls": 1.0

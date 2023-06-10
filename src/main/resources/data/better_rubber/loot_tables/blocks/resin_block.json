@@ -11,10 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "better_rubber:rubber_block"
+          "name": "better_rubber:resin_block"
         }
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "better_rubber:blocks/resin_block"
 }

@@ -7,5 +7,17 @@
   "block.better_rubber.resin_block": "Block of Resin",
   "block.better_rubber.rubber_block": "Block of Rubber",
 
-  "itemGroup.better_rubber": "Better Rubber"
+  "block.better_rubber.rubber_log": "Rubber Log",
+  "block.better_rubber.rubber_wood": "Rubber Wood",
+  "block.better_rubber.stripped_rubber_log": "Stripped Rubber Log",
+  "block.better_rubber.stripped_rubber_wood": "Stripped Rubber Wood",
+
+  "block.better_rubber.full_rubber_log": "Rubber Log (Full)",
+  "block.better_rubber.full_rubber_wood": "Rubber Wood (Full)",
+  "block.better_rubber.full_stripped_rubber_log": "Stripped Rubber Log (Full)",
+  "block.better_rubber.full_stripped_rubber_wood": "Stripped Rubber Wood (Full)",
+
+  "itemGroup.better_rubber": "Better Rubber",
+
+  "tooltip.better_rubber.full": "Contains Resin"
 }
