@@ -1,5 +1,8 @@
 package lemon_juice.better_rubber;
 
+import lemon_juice.better_rubber.block.ModBlocks;
+import lemon_juice.better_rubber.creativetab.ModCreativeTab;
+import lemon_juice.better_rubber.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -16,6 +19,14 @@ public class BetterRubber {
 
     public BetterRubber() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Register Items
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        // Register Creative Tab
+        ModCreativeTab.register(modEventBus);
+        modEventBus.addListener(ModCreativeTab::registerTabs);
 
         modEventBus.addListener(this::commonSetup);
 

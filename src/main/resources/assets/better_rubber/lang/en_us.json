@@ -1,0 +1,11 @@
+{
+  "item.better_rubber.resin": "Resin",
+  "item.better_rubber.rubber_bar": "Rubber Bar",
+  "item.better_rubber.raw_plastic": "Raw Plastic",
+  "item.better_rubber.plastic_sheets": "Plastic Sheets",
+
+  "block.better_rubber.resin_block": "Block of Resin",
+  "block.better_rubber.rubber_block": "Block of Rubber",
+
+  "itemGroup.better_rubber": "Better Rubber"
+}

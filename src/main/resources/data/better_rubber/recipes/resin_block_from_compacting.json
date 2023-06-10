@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "better_rubber:resin"
+    }
+  },
+  "result": {
+    "item": "better_rubber:resin_block",
+    "count": 1
+  }
+}
