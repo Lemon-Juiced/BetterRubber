@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "better_rubber:rubber_log",
+    "better_rubber:rubber_wood",
+    "better_rubber:stripped_rubber_log",
+    "better_rubber:stripped_rubber_wood",
+    "better_rubber:full_rubber_log",
+    "better_rubber:full_rubber_wood",
+    "better_rubber:full_stripped_rubber_log",
+    "better_rubber:full_stripped_rubber_wood"
+  ]
+}

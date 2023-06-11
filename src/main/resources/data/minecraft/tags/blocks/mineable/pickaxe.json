@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "better_rubber:resin_block",
-    "better_rubber:rubber_block"
+    "better_rubber:rubber_block",
+    "better_rubber:plastic_block"
   ]
 }

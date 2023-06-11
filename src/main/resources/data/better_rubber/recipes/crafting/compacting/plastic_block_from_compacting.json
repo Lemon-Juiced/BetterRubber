@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "better_rubber:plastic_sheets"
+    }
+  },
+  "result": {
+    "item": "better_rubber:plastic_block",
+    "count": 1
+  }
+}

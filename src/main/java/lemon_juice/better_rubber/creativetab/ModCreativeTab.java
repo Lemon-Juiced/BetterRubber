@@ -29,6 +29,7 @@ public class ModCreativeTab {
 
             event.accept(ModBlocks.RESIN_BLOCK.get());
             event.accept(ModBlocks.RUBBER_BLOCK.get());
+            event.accept(ModBlocks.PLASTIC_BLOCK.get());
 
             event.accept(ModBlocks.RUBBER_LOG.get());
             event.accept(ModBlocks.RUBBER_WOOD.get());
