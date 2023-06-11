@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "better_rubber:block/rubber_leaves"
+  }
+}

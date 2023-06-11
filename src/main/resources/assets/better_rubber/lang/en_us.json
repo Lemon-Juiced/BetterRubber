@@ -18,6 +18,9 @@
   "block.better_rubber.full_stripped_rubber_log": "Stripped Rubber Log (Full)",
   "block.better_rubber.full_stripped_rubber_wood": "Stripped Rubber Wood (Full)",
 
+  "block.better_rubber.rubber_leaves": "Rubber Leaves",
+  "block.better_rubber.rubber_sapling": "Rubber Sapling",
+
   "itemGroup.better_rubber": "Better Rubber",
 
   "tooltip.better_rubber.full": "Contains Resin"

@@ -2,14 +2,19 @@ package lemon_juice.better_rubber.block;
 
 import lemon_juice.better_rubber.BetterRubber;
 import lemon_juice.better_rubber.block.custom.FullRubberWoodBlock;
+import lemon_juice.better_rubber.block.custom.RubberLeavesBlock;
 import lemon_juice.better_rubber.block.custom.RubberWoodBlock;
 import lemon_juice.better_rubber.item.ModItems;
 import lemon_juice.better_rubber.item.custom.RubberWoodBlockItem;
+import lemon_juice.better_rubber.worldgen.tree.RubberTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +41,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> FULL_RUBBER_WOOD = registerRubberWoodBlock("full_rubber_wood", () -> new FullRubberWoodBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_WOOD)));
     public static final RegistryObject<Block> FULL_STRIPPED_RUBBER_LOG = registerRubberWoodBlock("full_stripped_rubber_log", () -> new FullRubberWoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_LOG)));
     public static final RegistryObject<Block> FULL_STRIPPED_RUBBER_WOOD = registerRubberWoodBlock("full_stripped_rubber_wood", () -> new FullRubberWoodBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_LOG)));
+
+    // Other Rubber Tree Pieces
+    public static final RegistryObject<Block> RUBBER_LEAVES = registerBlock("rubber_leaves", () -> new RubberLeavesBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_LEAVES).strength(.2f).sound(SoundType.GRASS)));
+    public static final RegistryObject<Block> RUBBER_SAPLING = registerBlock("rubber_sapling", () -> new SaplingBlock(new RubberTreeGrower(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+
+
 
     /******************************** Registry ********************************/
     public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

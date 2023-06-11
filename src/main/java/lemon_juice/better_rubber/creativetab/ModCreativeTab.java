@@ -40,6 +40,9 @@ public class ModCreativeTab {
             event.accept(ModBlocks.FULL_RUBBER_WOOD.get());
             event.accept(ModBlocks.FULL_STRIPPED_RUBBER_LOG.get());
             event.accept(ModBlocks.FULL_STRIPPED_RUBBER_WOOD.get());
+
+            event.accept(ModBlocks.RUBBER_LEAVES.get());
+            event.accept(ModBlocks.RUBBER_SAPLING.get());
         }
     }
 
