@@ -9,10 +9,7 @@ import lemon_juice.better_rubber.item.custom.RubberWoodBlockItem;
 import lemon_juice.better_rubber.worldgen.tree.RubberTreeGrower;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -45,7 +42,7 @@ public class ModBlocks {
     // Other Rubber Tree Pieces
     public static final RegistryObject<Block> RUBBER_LEAVES = registerBlock("rubber_leaves", () -> new RubberLeavesBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_LEAVES).strength(.2f).sound(SoundType.GRASS)));
     public static final RegistryObject<Block> RUBBER_SAPLING = registerBlock("rubber_sapling", () -> new SaplingBlock(new RubberTreeGrower(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
-
+    public static final RegistryObject<Block> POTTED_RUBBER_SAPLING = BLOCKS.register("potted_rubber_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ModBlocks.RUBBER_SAPLING, BlockBehaviour.Properties.copy(Blocks.FLOWER_POT).instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
     /******************************** Registry ********************************/

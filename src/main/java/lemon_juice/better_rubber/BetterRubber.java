@@ -3,6 +3,8 @@ package lemon_juice.better_rubber;
 import lemon_juice.better_rubber.block.ModBlocks;
 import lemon_juice.better_rubber.creativetab.ModCreativeTab;
 import lemon_juice.better_rubber.item.ModItems;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -33,7 +35,11 @@ public class BetterRubber {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {}
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RUBBER_SAPLING.getId(), ModBlocks.POTTED_RUBBER_SAPLING);
+        });
+    }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {}
