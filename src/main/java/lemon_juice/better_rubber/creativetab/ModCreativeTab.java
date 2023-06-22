@@ -27,6 +27,11 @@ public class ModCreativeTab {
             event.accept(ModItems.RAW_PLASTIC.get());
             event.accept(ModItems.PLASTIC_SHEETS.get());
 
+            event.accept(ModItems.SCUBA_HELMET.get());
+            event.accept(ModItems.RUBBER_CHESTPLATE.get());
+            event.accept(ModItems.RUBBER_LEGGINGS.get());
+            event.accept(ModItems.RUBBER_BOOTS.get());
+
             event.accept(ModBlocks.RESIN_BLOCK.get());
             event.accept(ModBlocks.RUBBER_BLOCK.get());
             event.accept(ModBlocks.PLASTIC_BLOCK.get());

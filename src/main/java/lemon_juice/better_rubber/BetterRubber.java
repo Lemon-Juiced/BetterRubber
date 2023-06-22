@@ -2,6 +2,7 @@ package lemon_juice.better_rubber;
 
 import lemon_juice.better_rubber.block.ModBlocks;
 import lemon_juice.better_rubber.creativetab.ModCreativeTab;
+import lemon_juice.better_rubber.event.ModEvents;
 import lemon_juice.better_rubber.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -29,6 +30,9 @@ public class BetterRubber {
         // Register Creative Tab
         ModCreativeTab.register(modEventBus);
         modEventBus.addListener(ModCreativeTab::registerTabs);
+
+        // Register Events
+        ModEvents.registerEvents();
 
         modEventBus.addListener(this::commonSetup);
 
