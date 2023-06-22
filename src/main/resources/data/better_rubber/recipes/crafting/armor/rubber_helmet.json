@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#O#",
+    "#G#",
+    "III"
+  ],
+  "key": {
+    "#": {
+      "item": "better_rubber:rubber_bar"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "better_rubber:rubber_helmet",
+    "count": 1
+  }
+}

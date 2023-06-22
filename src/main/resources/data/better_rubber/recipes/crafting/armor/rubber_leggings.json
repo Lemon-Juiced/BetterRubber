@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#O#",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "better_rubber:rubber_bar"
+    },
+    "O": {
+      "item": "minecraft:orange_dye"
+    }
+  },
+  "result": {
+    "item": "better_rubber:rubber_leggings",
+    "count": 1
+  }
+}

@@ -16,7 +16,11 @@ public class ScubaHelmetItem extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
-        if(!player.isEyeInFluid(FluidTags.WATER)) player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
+        if(!player.isCreative() && !player.isSpectator()) {
+            if (!player.isEyeInFluid(FluidTags.WATER)) {
+                player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 200, 0, false, false, true));
+            }
+        }
         super.onArmorTick(stack, level, player);
     }
 }
