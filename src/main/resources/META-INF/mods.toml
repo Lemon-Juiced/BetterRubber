@@ -4,11 +4,10 @@ license="GNU General Purpose License v3 (GPLv3)"
 
 [[mods]]
 modId="better_rubber"
-version="1.20.1-1.0.3"
+version="1.20.1-1.0.4"
 displayName="Better Rubber"
 logoFile="better_rubber.png"
-credits="Scalar Team"
-authors="Lemon_Juiced"
+authors="Lemon_Juiced & Scalar Team"
 
 description='''
 Makes rubber and plastic much easier to attain for any tech mods.
