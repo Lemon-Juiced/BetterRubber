@@ -1,25 +1,22 @@
 modLoader="javafml"
-loaderVersion="[47,)"
-license="GNU General Purpose License v3 (GPLv3)"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 [[mods]]
-modId="better_rubber"
-version="1.20.1-1.0.4"
-displayName="Better Rubber"
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
 logoFile="better_rubber.png"
-authors="Lemon_Juiced & Scalar Team"
+authors="${mod_authors}"
+description='''${mod_description}'''
 
-description='''
-Makes rubber and plastic much easier to attain for any tech mods.
-'''
-
-[[dependencies.better_rubber]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
     versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.better_rubber]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1,1.21)"
