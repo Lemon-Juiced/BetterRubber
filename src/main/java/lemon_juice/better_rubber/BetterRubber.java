@@ -4,6 +4,7 @@ import lemon_juice.better_rubber.block.ModBlocks;
 import lemon_juice.better_rubber.creativetab.ModCreativeTab;
 import lemon_juice.better_rubber.event.ModEvents;
 import lemon_juice.better_rubber.item.ModItems;
+import lemon_juice.better_rubber.util.ModCompostables;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -42,6 +43,9 @@ public class BetterRubber {
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RUBBER_SAPLING.getId(), ModBlocks.POTTED_RUBBER_SAPLING);
+
+            //Register Compostables
+            ModCompostables.setup(event);
         });
     }
 
