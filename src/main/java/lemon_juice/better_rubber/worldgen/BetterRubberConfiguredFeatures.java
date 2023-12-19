@@ -9,7 +9,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 
-public class ModConfiguredFeatures {
+public class BetterRubberConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER_KEY = registerKey("rubber");
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

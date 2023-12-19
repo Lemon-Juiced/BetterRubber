@@ -13,7 +13,7 @@ import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import java.util.List;
 
 // I have a feeling this file isn't needed because nothing is called out of itself...
-public class ModPlacedFeatures {
+public class BetterRubberPlacedFeatures {
     public static final ResourceKey<PlacedFeature> RUBBER_PLACED_KEY = createKey("rubber_placed");
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

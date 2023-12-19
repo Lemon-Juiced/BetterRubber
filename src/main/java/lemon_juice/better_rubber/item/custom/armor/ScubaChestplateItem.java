@@ -1,6 +1,6 @@
 package lemon_juice.better_rubber.item.custom.armor;
 
-import lemon_juice.better_rubber.item.custom.tiers.ModArmorMaterials;
+import lemon_juice.better_rubber.item.custom.tiers.BetterRubberArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 
 public class ScubaChestplateItem extends ArmorItem {
     public ScubaChestplateItem(Properties properties) {
-        super(ModArmorMaterials.RUBBER, ArmorItem.Type.CHESTPLATE, properties);
+        super(BetterRubberArmorMaterials.RUBBER, ArmorItem.Type.CHESTPLATE, properties);
     }
 
     public void onArmorTick(ItemStack stack, Level level, Player player) {
@@ -35,7 +35,7 @@ public class ScubaChestplateItem extends ArmorItem {
     }
 
     private boolean hasCorrectArmorOn(Player player){
-        ArmorMaterial material = ModArmorMaterials.RUBBER;
+        ArmorMaterial material = BetterRubberArmorMaterials.RUBBER;
         if(player.getInventory().getArmor(0).getItem() == Items.AIR ||
                 (player.getInventory().getArmor(1).getItem() == Items.AIR) ||
                 (player.getInventory().getArmor(2).getItem() == Items.AIR) ||

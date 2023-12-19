@@ -1,51 +1,48 @@
 package lemon_juice.better_rubber;
 
-import lemon_juice.better_rubber.block.ModBlocks;
-import lemon_juice.better_rubber.creativetab.ModCreativeTab;
-import lemon_juice.better_rubber.event.ModEvents;
-import lemon_juice.better_rubber.item.ModItems;
-import lemon_juice.better_rubber.util.ModCompostables;
+import lemon_juice.better_rubber.block.BetterRubberBlocks;
+import lemon_juice.better_rubber.creativetab.BetterRubberCreativeTab;
+import lemon_juice.better_rubber.event.BetterRubberEvents;
+import lemon_juice.better_rubber.item.BetterRubberItems;
+import lemon_juice.better_rubber.util.BetterRubberCompostables;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 @Mod(BetterRubber.MOD_ID)
 public class BetterRubber {
     public static final String MOD_ID = "better_rubber";
 
-    public BetterRubber() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
-        // Register Items
-        ModItems.register(modEventBus);
-        ModBlocks.register(modEventBus);
-
-        // Register Creative Tab
-        ModCreativeTab.register(modEventBus);
-        modEventBus.addListener(ModCreativeTab::registerTabs);
-
-        // Register Events
-        ModEvents.registerEvents();
-
+    public BetterRubber(IEventBus modEventBus) {
         modEventBus.addListener(this::commonSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
+        // Register Items
+        BetterRubberItems.register(modEventBus);
+        BetterRubberBlocks.register(modEventBus);
+
+        // Register Creative Tab
+        BetterRubberCreativeTab.register(modEventBus);
+        modEventBus.addListener(BetterRubberCreativeTab::registerTabs);
+
+        // Register Events
+        BetterRubberEvents.registerEvents();
+
+        NeoForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RUBBER_SAPLING.getId(), ModBlocks.POTTED_RUBBER_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(BetterRubberBlocks.RUBBER_SAPLING.getId(), BetterRubberBlocks.POTTED_RUBBER_SAPLING);
 
             //Register Compostables
-            ModCompostables.setup(event);
+            BetterRubberCompostables.setup(event);
         });
     }
 

@@ -1,6 +1,6 @@
 package lemon_juice.better_rubber.worldgen.tree;
 
-import lemon_juice.better_rubber.worldgen.ModConfiguredFeatures;
+import lemon_juice.better_rubber.worldgen.BetterRubberConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;
@@ -11,6 +11,6 @@ public class RubberTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource source, boolean b) {
-        return ModConfiguredFeatures.RUBBER_KEY;
+        return BetterRubberConfiguredFeatures.RUBBER_KEY;
     }
 }

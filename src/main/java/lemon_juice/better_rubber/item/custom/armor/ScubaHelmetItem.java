@@ -1,6 +1,6 @@
 package lemon_juice.better_rubber.item.custom.armor;
 
-import lemon_juice.better_rubber.item.custom.tiers.ModArmorMaterials;
+import lemon_juice.better_rubber.item.custom.tiers.BetterRubberArmorMaterials;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 
 public class ScubaHelmetItem extends ArmorItem {
     public ScubaHelmetItem(Properties properties) {
-        super(ModArmorMaterials.RUBBER, ArmorItem.Type.HELMET, properties);
+        super(BetterRubberArmorMaterials.RUBBER, ArmorItem.Type.HELMET, properties);
     }
 
     @Override
